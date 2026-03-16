@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Ropa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2rem;
+      gap: 2rem;
+    }
+
+    .producto {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 250px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .producto img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .producto h3 {
+      margin: 0.5rem 0;
+    }
+
+    .producto p {
+      color: #555;
+    }
+
+    .boton {
+      background-color: #000;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+
+    .boton:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CLAULOUGE</h1>
+    <p>la mejor tienda de ropa</p>
+  </header>
+
+  <section class="productos">
+    <!-- Camiseta Negra -->
+    <div class="producto">
+      <img src="camisetanegra png.webp" alt="Camiseta Negra">
+      <h3>Camiseta Negra</h3>
+      <p>Precio: $20</p>
+      <button class="boton">Agregar al carrito</button>
+    </div>
+
+    <!-- Camiseta Blanca -->
+    <div class="producto">
+      <img src="camisetablanca.webp" alt="Camiseta Blanca">
+      <h3>Camiseta Blanca</h3>
+      <p>Precio: $20</p>
+      <button class="boton">Agregar al carrito</button>
+    </div>
+
+    <!-- Zapatillas Air Force 1 -->
+    <div class="producto">
+      <img src="af1.jpg" alt="Zapatillas Air Force 1">
+      <h3>Air Force 1</h3>
+      <p>Precio: $90</p>
+      <button class="boton">Agregar al carrito</button>
+    </div>
+
+    <!-- Pantalones Vaqueros -->
+    <div class="producto">
+      <img src="vaqueros.webp" alt="Pantalones Vaqueros">
+      <h3>Pantalones Vaqueros</h3>
+      <p>Precio: $45</p>
+      <button class="boton">Agregar al carrito</button>
+    </div>
+  </section>
+
+</body>
+</html>

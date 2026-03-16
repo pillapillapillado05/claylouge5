@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Elemento raíz -->
+  <xs:element name="tienda" type="TiendaType"/>
+
+  <!-- Tipo: Tienda -->
+  <xs:complexType name="TiendaType">
+    <xs:sequence>
+      <xs:element name="encabezado" type="EncabezadoType"/>
+      <xs:element name="catalogo" type="CatalogoType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo: Encabezado -->
+  <xs:complexType name="EncabezadoType">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="eslogan" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo: Catálogo de productos -->
+  <xs:complexType name="CatalogoType">
+    <xs:sequence>
+      <xs:element name="producto" type="ProductoType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo: Producto -->
+  <xs:complexType name="ProductoType">
+    <xs:sequence>
+      <xs:element name="id"          type="xs:positiveInteger"/>
+      <xs:element name="nombre"      type="xs:string"/>
+      <xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+      <xs:element name="precio"      type="PrecioType"/>
+      <xs:element name="imagen"      type="ImagenType"/>
+      <xs:element name="categoria"   type="CategoriaType"/>
+      <xs:element name="disponible"  type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo: Precio con moneda -->
+  <xs:complexType name="PrecioType">
+    <xs:simpleContent>
+      <xs:extension base="xs:decimal">
+        <xs:attribute name="moneda" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- Tipo: Imagen con src y alt -->
+  <xs:complexType name="ImagenType">
+    <xs:attribute name="src" type="xs:anyURI" use="required"/>
+    <xs:attribute name="alt" type="xs:string"  use="required"/>
+  </xs:complexType>
+
+  <!-- Tipo: Categoría (valores permitidos) -->
+  <xs:simpleType name="CategoriaType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="camisetas"/>
+      <xs:enumeration value="pantalones"/>
+      <xs:enumeration value="zapatillas"/>
+      <xs:enumeration value="accesorios"/>
+      <xs:enumeration value="ropa_exterior"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

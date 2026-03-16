@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tienda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="tienda_ropa.xsd">
+
+  <!-- ==============================
+       ENCABEZADO DE LA TIENDA
+       ============================== -->
+  <encabezado>
+    <nombre>CLAULOUGE</nombre>
+    <eslogan>la mejor tienda de ropa</eslogan>
+  </encabezado>
+
+  <!-- ==============================
+       CATÁLOGO DE PRODUCTOS
+       ============================== -->
+  <catalogo>
+
+    <!-- Producto 1: Camiseta Negra -->
+    <producto>
+      <id>1</id>
+      <nombre>Camiseta Negra</nombre>
+      <descripcion>Camiseta básica de algodón 100%, color negro, disponible en tallas S, M, L y XL.</descripcion>
+      <precio moneda="USD">20.00</precio>
+      <imagen src="img/camiseta_negra.jpg" alt="Camiseta Negra"/>
+      <categoria>camisetas</categoria>
+      <disponible>true</disponible>
+    </producto>
+
+    <!-- Producto 2: Camiseta Blanca -->
+    <producto>
+      <id>2</id>
+      <nombre>Camiseta Blanca</nombre>
+      <descripcion>Camiseta básica de algodón 100%, color blanco, disponible en tallas S, M, L y XL.</descripcion>
+      <precio moneda="USD">20.00</precio>
+      <imagen src="img/camiseta_blanca.jpg" alt="Camiseta Blanca"/>
+      <categoria>camisetas</categoria>
+      <disponible>true</disponible>
+    </producto>
+
+    <!-- Producto 3: Zapatillas Air Force 1 -->
+    <producto>
+      <id>3</id>
+      <nombre>Air Force 1</nombre>
+      <descripcion>Zapatillas Nike Air Force 1 clásicas, suela de goma y corte bajo. Tallas del 38 al 46.</descripcion>
+      <precio moneda="USD">90.00</precio>
+      <imagen src="img/air_force_1.jpg" alt="Zapatillas Air Force 1"/>
+      <categoria>zapatillas</categoria>
+      <disponible>true</disponible>
+    </producto>
+
+    <!-- Producto 4: Pantalones Vaqueros -->
+    <producto>
+      <id>4</id>
+      <nombre>Pantalones Vaqueros</nombre>
+      <descripcion>Pantalones vaqueros de corte recto, tejido denim resistente. Disponibles en tallas 28–38.</descripcion>
+      <precio moneda="USD">45.00</precio>
+      <imagen src="img/pantalones_vaqueros.jpg" alt="Pantalones Vaqueros"/>
+      <categoria>pantalones</categoria>
+      <disponible>true</disponible>
+    </producto>
+
+  </catalogo>
+
+</tienda>
